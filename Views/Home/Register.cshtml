@@ -1,0 +1,30 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Register";
+}
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>
+            Registration form
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    </head>
+    <body class="card-body">
+        <div>
+            <form asp-controller="home" asp-action="register" method="post">
+                <div class="form-group">
+                    <label for="Email">Login: </label>
+                    <input type="email" asp-for="UserLogin" class="form-control" />
+                </div>    
+                <div class="form-group">
+                    <label for="Password">Password: </label>
+                    <input type="password" asp-for="UserPassword" class="form-control" />
+                </div> 
+                <button class="btn btn-primary" type="submit">Register</button>
+            </form>
+        </div>
+    </body>
+</html>
+
