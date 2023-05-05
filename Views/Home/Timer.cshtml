@@ -1,0 +1,65 @@
+﻿@using MyFirstAzureWebApp.Controllers
+@{
+    ViewData["Title"] = @language.GetKey("timer");
+}
+@inject LanguageService language
+<head>
+        
+<link rel="stylesheet" href="~/css/timer.css" asp-append-version="true" />
+</head>
+<body>
+
+<h1>@language.GetKey("timer")</h1>
+<div class="timer">
+        <div class="timer-inputs">
+            <label for="hours">@language.GetKey("hours")</label>
+            <select id="hours"></select>
+            <br />
+            <label for="minutes">@language.GetKey("minutes")</label>
+            <select id="minutes"></select>
+            <br />
+            <label for="seconds">@language.GetKey("seconds")</label>
+            <select id="seconds"></select>
+        </div>
+
+        <div class="timer-controls">
+            <button id="start">@language.GetKey("start")</button>
+            <button id="stop">@language.GetKey("stop")</button>
+            <button id="reset">@language.GetKey("reset")</button>
+        </div>
+
+        <div class="timer-display">
+            <span id="hours-display">00</span>:
+            <span id="minutes-display">00</span>:
+            <span id="seconds-display">00</span>
+        </div>
+    </div>
+
+    <div class="clock">
+        <div class="border">
+            <div class="lines">
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="numbers">
+                <div>
+                </div>
+            </div>
+            <div class="arrow"></div>
+        </div>
+    </div>
+
+
+<form asp-controller="home" asp-action="Timer" method="post">
+    <button class="btn btn-primary" type="submit">@language.GetKey("open stopWatch")</button>
+</form>
+<script src="~/js/timerv2.js" asp-append-version="true" type="module"></script>
+</body>

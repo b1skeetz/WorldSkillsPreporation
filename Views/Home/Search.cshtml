@@ -1,0 +1,44 @@
+﻿@using MyFirstAzureWebApp.Controllers
+@model List<User>
+@{
+    ViewData["Title"] = @language.GetKey("search");
+}
+@inject LanguageService language
+<div class="container">
+ <h1>@language.GetKey("search")</h1>
+    <div class="card">
+        <div class="card-body">
+            <h2>@language.GetKey("user list")</h2>
+            @using (Html.BeginForm("Search", "Home", FormMethod.Post, new { @class = "form-inline" }))
+            {
+                <div class="form-group">
+                    <label for="userLogin">@language.GetKey("user login")</label>
+                    @Html.TextBox("userLogin", null, new { @class = "form-control" })
+                </div>
+                <button class="btn btn-primary" type="submit">@language.GetKey("search")</button>
+            }
+            <div class="table-responsive mt-3">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>@language.GetKey("user id")</th>
+                            <th>@language.GetKey("user login")</th>
+                            <th>@language.GetKey("user password")</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>@user.UserId</td>
+                                <td>@user.UserLogin</td>
+                                <td>@user.UserPassword</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

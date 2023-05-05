@@ -1,0 +1,11 @@
+﻿@using MyFirstAzureWebApp.Controllers
+@{
+    ViewData["Title"] = @language.GetKey("privacy");
+}
+@inject LanguageService language
+<h1> @language.GetKey("privacy")</h1>
+
+<h2> @language.GetKey("created")</h2>
+<h3> @language.GetKey("student")</h3>
+<h3> @language.GetKey("group")</h3>
+<h3> @language.GetKey("contact")</h3>

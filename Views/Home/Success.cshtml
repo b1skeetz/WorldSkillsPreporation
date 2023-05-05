@@ -1,8 +1,61 @@
-﻿@model User
+﻿@using MyFirstAzureWebApp.Controllers
+@model User
 @{
-    ViewData["Title"] = "Success";
+    ViewData["Title"] = @language.GetKey("stopWatch");
 }
+@inject LanguageService language
+<head>
+        
+<link rel="stylesheet" href="~/css/timer.css" asp-append-version="true" />
+</head>
+<body>
 
-<h1>Success</h1>
+<h1>@language.GetKey("stopWatch")</h1>
+<!--
 <input type="email" asp-for="UserLogin" class="form-control" />
 <input type="text" asp-for="UserPassword" class="form-control" />
+-->
+
+<main style="display: flex; justify-content: space-between;">
+    <div class="timer">
+        <p class="TimerH">@language.GetKey("stopWatch")</p>
+        <br>
+        <span id="hours">00</span><span>:</span>
+        <span id="minutes">00</span><span>:</span>
+        <span id="seconds">00</span>
+        <div class="controls">
+            <button onclick="startTimer()" class="TimerControls" id="start">@language.GetKey("start")</button>
+            <button onclick="stopTimer()" class="TimerControls" id="stop">@language.GetKey("stop")</button>
+            <button onclick="resetTimer()" class="TimerControls" id="reset">@language.GetKey("reset")</button>
+        </div>
+    </div>
+
+    <div class="clock">
+        <div class="border">
+            <div class="lines">
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="numbers">
+                <div>
+                </div>
+            </div>
+            <div class="arrow"></div>
+        </div>
+    </div>
+</main>
+
+<form asp-controller="home" asp-action="Success" method="post">
+    <button class="btn btn-primary" type="submit">@language.GetKey("open timer")</button>
+</form>
+<script src="~/js/timer.js" asp-append-version="true" type="module"></script>
+<script src="~/js/MyLibrary.js" asp-append-version="true"></script>
+</body>

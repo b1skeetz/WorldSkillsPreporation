@@ -1,12 +1,15 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using MyFirstAzureWebApp.Controllers
+@{
+    ViewData["Title"] = @language.GetKey("home");
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@inject LanguageService language
+<div class="preloader">
+    <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+    </div>
 </div>
-<div class="jumbotron">
-    <h1>.NET 💜 Azure</h1>
-    <p class="lead">Example .NET app to Azure App Service.</p>
+<div class="text-center">
+    <h1 class="display-4">@language.GetKey("welcome")</h1>
+    <p>@language.GetKey("learn")@language.GetKey("building")</p>
 </div>

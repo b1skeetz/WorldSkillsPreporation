@@ -1,0 +1,42 @@
+﻿@using MyFirstAzureWebApp.Controllers
+@{
+    ViewData["Title"] = @language.GetKey("drag");
+}
+@inject LanguageService language
+
+
+<h1>@language.GetKey("drag")</h1>
+<div class="container text-center">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="form" method="post" enctype="multipart/form-data" data-pasley-validate class="form-horizontal form-label-left">
+                <div class="form-group">
+                    <label class="control-label col-md-12" for="fisrt-name">
+                        @language.GetKey("upload photo")<span class="required">*</span>
+                    </label>
+                    <div class="col-md-12" id="dropzone">
+                        <div action="/home/upload" class="dropzone" id="uploader">
+                            @language.GetKey("drag here")<br />
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <button onclick="location.reload();" class="btn btn-primary">@language.GetKey("update")</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        @foreach (var file in ViewBag.Files)
+        {
+            <div class="col-md-3 mb-3">
+                <img src="~/Files/@file" class="img-fluid">
+            </div>
+        }
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>

@@ -5,10 +5,10 @@ namespace MyFirstAzureWebApp.Services
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<Models.User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Server=first-servertest.postgres.database.azure.com;Database=postgres;Port=5432;User Id=postgres@first-servertest;Password=IosifStalin2;Ssl Mode=Require;");
+            optionsBuilder.UseSqlServer("Data Source=SQL8003.site4now.net;Initial Catalog=db_a98204_b1skeetz;User Id=db_a98204_b1skeetz_admin;Password=damirenergy07");
         }
     }
 }

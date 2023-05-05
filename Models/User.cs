@@ -15,7 +15,7 @@ namespace MyFirstAzureWebApp.Models
             UserLogin = userLogin;
             UserPassword = userPassword;
         }
-        [Key]
+        //[Key]
         public int UserId { get; set; }
         public string UserLogin { get; set; } = null!;
         public string UserPassword { get; set; } = null!;

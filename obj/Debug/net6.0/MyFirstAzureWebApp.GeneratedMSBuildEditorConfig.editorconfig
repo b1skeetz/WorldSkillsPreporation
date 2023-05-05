@@ -15,16 +15,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\damir\source\repos\MyFirstAzureWebApp\MyFirstAzureWebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/damir/source/repos/MyFirstAzureWebApp/MyFirstAzureWebApp/Views/Home/DragDrop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEcmFnRHJvcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/damir/source/repos/MyFirstAzureWebApp/MyFirstAzureWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/damir/source/repos/MyFirstAzureWebApp/MyFirstAzureWebApp/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/damir/source/repos/MyFirstAzureWebApp/MyFirstAzureWebApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/damir/source/repos/MyFirstAzureWebApp/MyFirstAzureWebApp/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/damir/source/repos/MyFirstAzureWebApp/MyFirstAzureWebApp/Views/Home/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/damir/source/repos/MyFirstAzureWebApp/MyFirstAzureWebApp/Views/Home/Success.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/damir/source/repos/MyFirstAzureWebApp/MyFirstAzureWebApp/Views/Home/Timer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaW1lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/damir/source/repos/MyFirstAzureWebApp/MyFirstAzureWebApp/Views/Shared/Error.cshtml]
